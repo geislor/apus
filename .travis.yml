@@ -32,3 +32,8 @@ install: pip install -U tox
 language: python
 python: 3.5
 script: tox -e ${TOXENV}
+notifications:
+  email:
+    recipients:
+      - geislor@gmail.com
+  slack: antlia:yi0MtfE2vi8JWOlH20w7SN61
