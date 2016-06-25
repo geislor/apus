@@ -31,9 +31,10 @@ setup(
     packages=[
         'apus',
         'apus.users',
+        'apus.config',
+        'apus.fluent_python',
     ],
-    package_dir={'apus':
-                     'apus'},
+    package_dir={'apus': 'apus'},
     entry_points={
         'console_scripts': [
             'apus=apus.cli:main'
