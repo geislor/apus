@@ -1,5 +1,5 @@
 # -*- coding:utf-8 -*-
-from .users.models import Users, session
+from apus.users.models import Users, session
 
 
 def general(command):

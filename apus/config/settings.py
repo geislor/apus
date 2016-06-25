@@ -1,10 +1,13 @@
 # -*- coding:utf-8 -*-
 import os
+import sys
 
 # GENERAL
-ROOT_DIR = os.path.abspath(os.path.join(__file__, os.pardir, os.pardir))
-PACKAGE_DIR = os.path.abspath(
-    os.path.join(__file__, os.pardir, os.pardir, os.pardir))
+abspath = lambda *p: os.path.abspath(os.path.join(*p))
+CONFIG_DIR = abspath(os.path.dirname(__file__))
+PROJECT_DIR = os.path.dirname(CONFIG_DIR)
+PROJECT_ROOT = os.path.dirname(CONFIG_DIR)
+sys.path.insert(0, os.path.join(PROJECT_DIR, "apus"))
 
 # DATABASE
 DATABASE_NAME = 'apus.db'
