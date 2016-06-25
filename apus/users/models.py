@@ -1,6 +1,7 @@
-from sqlalchemy import *
+from sqlalchemy import Column, Integer, String
 from sqlalchemy.orm import validates
-from ..config.db import Base, session
+
+from apus.config.db import Base, create_table
 
 
 class Users(Base):
@@ -8,10 +9,6 @@ class Users(Base):
     id = Column(Integer, primary_key=True)
     username = Column(String, unique=True)
     email = Column(String, unique=True)
-
-    def __init__(self, username=None, email=None):
-        self.username = username
-        self.email = email
 
     def __repr__(self):
         return "Usuário: {}, E-mail: {}".format(self.username, self.email)
@@ -21,9 +18,5 @@ class Users(Base):
         assert '@' in users
         return users
 
-    def save(self):
-        session.add(self)
-        session.commit()
-        return self
 
-
+create_table()

@@ -1,12 +1,24 @@
-from sqlalchemy import *
+from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
-from .settings import PROJECT_DIR, DATABASE_NAME
-
-__all__=('Base', 'session',)
 
 Base = declarative_base()
-engine = create_engine('sqlite:///{}/{}'.format(PROJECT_DIR, DATABASE_NAME))
-Session = sessionmaker(bind=engine)
-session = Session()
-Base.metadata.create_all(engine)
+engine = create_engine('sqlite:///apus.db')
+
+
+def create_table():
+    Base.metadata.create_all(engine)
+
+
+# WRITE
+Base.metadata.bind = engine
+DBSession = sessionmaker(bind=engine)
+session = DBSession()
+
+def save_in_db(obj):
+    session.add(obj)
+    session.commit()
+
+# READ
+def query(model):
+    return session.query(model)
