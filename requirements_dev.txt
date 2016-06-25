@@ -10,3 +10,4 @@ cryptography>=1.0
 PyYAML==3.11
 pytest==2.9.2
 sqlalchemy==1.0.13
+Click>=6.0
