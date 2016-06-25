@@ -12,11 +12,6 @@ from users.models import Users, session
 def general(user):
     """
     Hello!
-
-    :param init: Iniciar configurações gerais.
-    :param count:
-    :param name:
-    :return:
     """
 
     if user == 'create':
