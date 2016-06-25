@@ -2,7 +2,7 @@
 
 __author__ = 'Geislor Crestani'
 __email__ = 'geislor@gmail.com'
-__version__ = '0.1.6'
+__version__ = '0.1.7'
 
 import os
 import sys

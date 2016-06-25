@@ -30,6 +30,7 @@ setup(
     url='https://github.com/geislor/apus',
     packages=[
         'apus',
+        'apus.users',
     ],
     package_dir={'apus':
                      'apus'},
