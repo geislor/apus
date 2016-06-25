@@ -27,7 +27,7 @@ env:
 - TOXENV=py33
 - TOXENV=py27
 - TOXENV=py26
-install: pip install -U tox sqlalchemy
+install: pip install -U tox sqlalchemy auxlib
 language: python
 python: 3.5
 script: tox -e ${TOXENV}
