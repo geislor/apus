@@ -1,7 +1,7 @@
 # -*- coding:utf-8 -*-
 
 import click
-from users.models import Users, session
+from .users.models import Users, session
 
 
 @click.command()

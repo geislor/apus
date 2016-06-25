@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 from setuptools import setup
+from apus import __version__
 
 with open('README.rst') as readme_file:
     readme = readme_file.read()
@@ -21,7 +22,7 @@ test_requirements = [
 
 setup(
     name='apus',
-    version='0.1.0',
+    version=__version__,
     description="Caso de estudo para criação de Python Package.",
     long_description=readme + '\n\n' + history,
     author="Geislor Crestani",
@@ -31,7 +32,7 @@ setup(
         'apus',
     ],
     package_dir={'apus':
-                 'apus'},
+                     'apus'},
     entry_points={
         'console_scripts': [
             'apus=apus.cli:main'

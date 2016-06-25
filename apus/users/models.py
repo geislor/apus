@@ -1,6 +1,6 @@
 from sqlalchemy import *
 from sqlalchemy.orm import validates
-from config.db import Base, session
+from ..config.db import Base, session
 
 
 class Users(Base):

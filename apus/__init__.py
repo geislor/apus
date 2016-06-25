@@ -2,7 +2,7 @@
 
 __author__ = 'Geislor Crestani'
 __email__ = 'geislor@gmail.com'
-__version__ = '0.1.1'
-from menu import general as menu
+__version__ = '0.1.3'
+from .menu import general
 
-__all__=('menu')
+__all__ = ('general',)
