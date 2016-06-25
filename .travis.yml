@@ -1,13 +1,12 @@
 deploy:
-  on:
-    condition: "$TOXENV == py27"
-    repo: geislor/apus
-    tags: true
   provider: pypi
-  password:
-    secure: g5cl5snbm/FzQ+UwVlESpboDJuWDXQ3Ceu7a+UWJu4MUSlqAula+ZRwupHabVxAZ3mrBNvxBjvqJ4p7LAsEilrZ2Kwb7ea/4Ndx1atm24uYwwPYEI/nF+nGbaGBDUR6lB9vIs7q06sNe3Q3I1VIWxceqX6VS+BCYCj/6f14BinoDtgqyFZ00a7ah+b/wvduSV0GY/xZ+6tuGEpe+m1hQxn4VQQRN5ej9NmaYM1j1JTOhfTATmSbqcDcx+yqwRiKX8FKOmYj2YbPqFozb8OPv38rhUTciDeV5PxAtJtc90ROBqwNz8waGv/afsJ7Jk0V0PfKvwxXFES72ZK4sNxB/u8mP/CYUWoqnSTn9aWtl8IlRLUJTnzmYFvCJ+eJ6Hdy67+OIuxO/VdBl+6J1fElkGoBePcEe1udTo7nm6rdqRC8Y/a83zU7EH/L+bMPE2jNzZWQ4Hsw+nW0zusSaVdngRYUBf00XK/TZmUiAcDit+mJ0WK0tI3x1lIJAsWuCaiuAneZ6S8U/MmL+hxWoS/at8RMUQ/6LYrfPxWGEPAP91CJB1plBzZXKgZwcUPtBmWabiikL4W6sl652nPpvaYRG3VPdFjiGCYcnMMDOTXaJiBg2VhpC3Jd47i1c4HEQIcuwczOCOc5tyZfmtbgUimDGyDB0tUgKmSsdrBbAwYFbZVw=
   user: geislor
-  distributions: sdist bdist_wheel
+  password:
+    secure: d1ka0AdiRi/HuXPRtWBtL/GCffn5Xj7XSvpzbQorHdeGQtjtdYld76K1l/J6f4URiTg1VNQo7VY5E2DRNARcZh+VVRqzHOiVYBX5KtOG9Bc7fVjqStsaNRld1N0M3nsomKHOld4LZt1Wn2w6kKXmH8XjQqt+dvHJLrcV9iUjZvR1U0X2VTTrrRbzx7K1dktB/atL4CgS19aC9E5X7EPpiGrtn7WiCJv7Agw/7lTUKUwchWuDxf8JrZ9gEpfIFehrIGmRgUlrU00JLvJJ1NvgH35RwKtCSMEnyL+6kxD7sh1DR2MkxHPsJnbQDgzHWMEcqGZaBym5040b5Gvnz/MVAR+bS2S069xoXO/+m94LBOIonqJEBw+78LDwa7Hql5l0WH4w3ex5G0dKslL53xpI4c8QbUIl3JlGdfrkxSE7T9yt0jTo1DmMRE+i9FRYyrS3IQG2vFCeShYXvKm3lahlfiSIXBRYVN3jlBvJy5yGkJvB25DKs9DiHrDT6utdt2brSduc6DG70Ae5loco9mhxX105p37eBMuY9pDyCinaizl8l3QPGRIsWISq5QLMCI+yJZGDmu6Ba8Opo2B3NVQGi7/PvuhO2igHSZcUcrANz52Z3rSwA8dQRNA5IOBGEpH9NWeQgr/xghjEI3/sgnbb+CWI2+s6l1/2/puujMZ6xRM=
+  on:
+    tags: true
+    distributions: sdist bdist_wheel
+    repo: geislor/apus
 env:
 - TOXENV=py35
 - TOXENV=py34
