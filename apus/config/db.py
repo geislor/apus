@@ -15,9 +15,11 @@ Base.metadata.bind = engine
 DBSession = sessionmaker(bind=engine)
 session = DBSession()
 
+
 def save_in_db(obj):
     session.add(obj)
     session.commit()
+
 
 # READ
 def query(model):

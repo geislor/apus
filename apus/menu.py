@@ -20,4 +20,3 @@ def general(command):
         for i, u in enumerate(usu.all()):
             print(i, u)
         pass
-

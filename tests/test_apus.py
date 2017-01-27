@@ -8,22 +8,19 @@ test_apus
 Tests for `apus` module.
 """
 
-import pytest
-
-from contextlib import contextmanager
 from click.testing import CliRunner
 
 from apus import cli
 
 
 class TestApus(object):
-
     @classmethod
     def setup_class(cls):
         pass
 
     def test_something(self):
         pass
+
     def test_command_line_interface(self):
         runner = CliRunner()
         result = runner.invoke(cli.main)
@@ -36,4 +33,3 @@ class TestApus(object):
     @classmethod
     def teardown_class(cls):
         pass
-
